@@ -1,0 +1,150 @@
+.inputContainer {
+  position: relative;
+  width: 100%;
+}
+
+.inputForm {
+  padding: 15px;
+  background: white;
+  border-top: 1px solid #eee;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #eee;
+  border-radius: 20px;
+  font-size: 14px;
+  outline: none;
+}
+
+.input:focus {
+  border-color: #673ab7;
+}
+
+.sendButton, .mediaButton {
+  background: #673ab7;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 0;
+  transition: all 0.2s ease;
+}
+
+.mediaButton {
+  background: #8561c5;
+}
+
+.mediaButton:hover {
+  background: #6a4c9c;
+  transform: scale(1.05);
+}
+
+.mediaButton.active {
+  background: #4a3578;
+  transform: scale(1.1);
+}
+
+.mediaButton.recording {
+  background: #f44336;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.imageOptionsContainer {
+  position: relative;
+}
+
+.imageOptions {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  background: white;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  padding: 8px;
+  margin-bottom: 8px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.imageOptionButton {
+  background: none;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+  white-space: nowrap;
+}
+
+.imageOptionButton:hover {
+  background: #f0f0f0;
+}
+
+.mediaPreview {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  background: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 8px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.cameraPreview {
+  width: 100%;
+  max-height: 300px;
+  object-fit: contain;
+}
+
+.captureButton {
+  position: absolute;
+  bottom: 16px;
+  background: #673ab7;
+  color: white;
+  border: none;
+  padding: 8px 24px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: transform 0.2s;
+}
+
+.captureButton:hover {
+  transform: scale(1.05);
+}

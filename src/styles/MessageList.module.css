@@ -1,0 +1,141 @@
+.messageList {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.message {
+  max-width: 70%;
+  margin: 8px 0;
+  align-self: flex-start;
+}
+
+.message.sent {
+  align-self: flex-end;
+}
+
+.message.system {
+  align-self: center;
+  max-width: 85%;
+}
+
+.messageContent {
+  background: #e6e2e2;
+  padding: 10px 15px;
+  border-radius: 15px;
+  font-size: 14px;
+}
+
+.sent .messageContent {
+  background: #673ab7;
+  color: white;
+}
+
+.system .messageContent {
+  background: #2196F3;
+  color: white;
+  text-align: center;
+  font-style: italic;
+  padding: 8px 20px;
+  border-radius: 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.systemText {
+  font-size: 13px;
+}
+
+.messageHeader {
+  margin-bottom: 4px;
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sent .messageHeader {
+  text-align: right;
+}
+
+.author {
+  font-weight: bold;
+  color: #333;
+  font-size: 13px;
+}
+
+.authorSent {
+  color: #ffd700; /* Sarı renk, mor arka plan üzerine */
+}
+
+.timestamp {
+  color: rgba(255, 255, 255, 0.7);
+  margin-left: 8px;
+}
+
+.text {
+  word-break: break-word;
+  line-height: 1.4;
+}
+
+.imageContainer {
+  max-width: 300px;
+  max-height: 300px;
+  overflow: hidden;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.imageContainer:hover {
+  transform: scale(1.02);
+}
+
+.imageMessage {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+.imagePreviewOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.imagePreviewContainer {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+}
+
+.previewImage {
+  max-width: 100%;
+  max-height: 90vh;
+  object-fit: contain;
+}
+
+.closeButton {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.closeButton:hover {
+  color: #ddd;
+}

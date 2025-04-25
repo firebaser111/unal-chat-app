@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/unal-chat-app/static/css/main.62c49d75.css",
-    "main.js": "/unal-chat-app/static/js/main.a8b67899.js",
+    "main.js": "/unal-chat-app/static/js/main.c4c33708.js",
     "index.html": "/unal-chat-app/index.html",
     "main.62c49d75.css.map": "/unal-chat-app/static/css/main.62c49d75.css.map",
-    "main.a8b67899.js.map": "/unal-chat-app/static/js/main.a8b67899.js.map"
+    "main.c4c33708.js.map": "/unal-chat-app/static/js/main.c4c33708.js.map"
   },
   "entrypoints": [
     "static/css/main.62c49d75.css",
-    "static/js/main.a8b67899.js"
+    "static/js/main.c4c33708.js"
   ]
 }

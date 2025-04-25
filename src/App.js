@@ -2,6 +2,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import './App.css';
 import ConnectionForm from './components/ConnectionForm';
 import ChatWindow from './components/ChatWindow';
+import config from './config';
 
 function App() {
   const [connected, setConnected] = useState(false);
@@ -102,7 +103,7 @@ function App() {
     <div className="App">
       {!connected ? (
         <>
-          <ConnectionForm onConnect={handleConnect} />
+          <ConnectionForm onConnect={handleConnect} defaultServerUrl={config.websocketUrl} />
           {error && <div className="error-message">
             {error}
             {retries > 0 && ` (Retry attempt ${retries}/${MAX_RETRIES})`}
